@@ -1,5 +1,7 @@
 [versions]
 agp = "8.6.0"
+compiler = "4.14.2"
+glide = "4.16.0"
 hiltAndroidGradlePlugin = "2.49"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
@@ -7,20 +9,25 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
+lifecycleViewmodelKtx = "2.8.6"
 material = "1.12.0"
 activity = "1.9.2"
 constraintlayout = "2.1.4"
 navigationFragment = "2.8.1"
 navigationUi = "2.8.1"
+playServicesLocation = "21.3.0"
 roomKtx = "2.6.1"
 roomCompiler = "2.6.1"
 roomRuntime = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroidGradlePlugin" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "hiltAndroidGradlePlugin" }
 hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hiltAndroidGradlePlugin" }
@@ -35,6 +42,7 @@ navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-
 navigation-ui = { module = "androidx.navigation:navigation-ui", version.ref = "navigationUi" }
 navigation-fragment = { module = "androidx.navigation:navigation-fragment", version.ref = "navigationFragment" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

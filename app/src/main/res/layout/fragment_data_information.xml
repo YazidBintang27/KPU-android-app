@@ -1,14 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.DataInformationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="?attr/actionBarSize"
+        app:title="Detail"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/arrow_back_24px"
+        android:background="@color/red"
+        android:layout_marginBottom="20dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-</FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/white"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIK: "
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_medium"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_nik_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="36033030303"
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_semibold"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama: "
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_medium"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_nama_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yazid"
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_semibold"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No. HP: "
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_medium"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_nohp_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0998723525"
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_semibold"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis kelamin: "
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_medium"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_jk_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="36033030303"
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_semibold"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal pendataan: "
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_medium"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_tanggal_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="36033030303"
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_semibold"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lokasi pendataan: "
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_medium"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_alamat_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="36033030303"
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_semibold"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gambar pendataan: "
+                android:textSize="18sp"
+                android:textColor="@color/grey_onbackground"
+                android:fontFamily="@font/poppins_medium"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/iv_gambar_data"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:contentDescription="Gambar pendataan"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

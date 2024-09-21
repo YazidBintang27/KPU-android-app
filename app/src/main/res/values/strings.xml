@@ -2,4 +2,21 @@
     <string name="app_name">KPUApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="informasi">Informasi</string>
+    <string name="form_entry">Form Entry</string>
+    <string name="lihat_data">Lihat Data</string>
+    <string name="keluar">Keluar</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="created_by_yazid">Created by Yazid</string>
+    <string name="nik">NIK</string>
+    <string name="nama">Nama</string>
+    <string name="no_hp">No. HP</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="alamat">Alamat</string>
+    <string name="pilih_gambar">Pilih gambar</string>
+    <string name="gambar_pendataan">Gambar pendataan</string>
+    <string name="submit">Submit</string>
+    <string name="deskripsi_aplikasi">Deskripsi Aplikasi:</string>
+    <string name="deskripsi">KPU App merupakan aplikasi yang digunakan oleh petugas lapangan untuk mendata keluarga yang memiliki hak pilih. Aplikasi ini dapat merekam merekam data penduduk, titik lokasi rumah calon pemilih serta foto bukti rekam kunjungan pengambilan data.</string>
 </resources>

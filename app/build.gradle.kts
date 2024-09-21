@@ -3,7 +3,7 @@ plugins {
    alias(libs.plugins.kotlin.android)
    id("com.google.devtools.ksp")
    id("com.google.dagger.hilt.android")
-
+   id ("androidx.navigation.safeargs")
 }
 
 android {
@@ -55,14 +55,15 @@ dependencies {
 
    implementation(libs.navigation.fragment)
    implementation(libs.navigation.ui)
-
-   //Room Database
    implementation(libs.androidx.room.runtime)
    ksp(libs.androidx.room.compiler)
    implementation(libs.androidx.room.ktx)
-
-   //Dagger Hilt
    implementation(libs.hilt.android)
    ksp(libs.dagger.compiler)
    ksp(libs.hilt.compiler)
+   implementation(libs.androidx.lifecycle.viewmodel.ktx)
+   implementation(libs.play.services.location)
+   implementation(libs.glide)
+   annotationProcessor(libs.compiler)
+
 }

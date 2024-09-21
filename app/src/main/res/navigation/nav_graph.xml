@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
 
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.latihan.kpuapp.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.latihan.kpuapp.fragments.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_formEntryFragment"
+            app:destination="@id/formEntryFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_dataInformationFragment"
+            app:destination="@id/dataInformationFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_listDataFragment"
+            app:destination="@id/listDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formEntryFragment"
+        android:name="com.latihan.kpuapp.fragments.FormEntryFragment"
+        android:label="fragment_form_entry"
+        tools:layout="@layout/fragment_form_entry" />
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.latihan.kpuapp.fragments.InformationFragment"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" />
+    <fragment
+        android:id="@+id/dataInformationFragment"
+        android:name="com.latihan.kpuapp.fragments.DataInformationFragment"
+        android:label="fragment_data_information"
+        tools:layout="@layout/fragment_data_information" >
+        <argument
+            android:name="nik"
+            app:argType="string"
+            android:defaultValue="00000" />
+    </fragment>
+    <fragment
+        android:id="@+id/listDataFragment"
+        android:name="com.latihan.kpuapp.fragments.ListDataFragment"
+        android:label="fragment_list_data"
+        tools:layout="@layout/fragment_list_data" >
+        <action
+            android:id="@+id/action_listDataFragment_to_dataInformationFragment"
+            app:destination="@id/dataInformationFragment" />
+    </fragment>
 </navigation>

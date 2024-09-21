@@ -1,10 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal"
     tools:context=".fragments.DashboardFragment">
 
-    
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/kpu_logo"
+        android:layout_marginTop="20dp"
+        android:contentDescription="Logo"
+        tools:ignore="HardcodedText" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selamat_datang"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/informasi"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/red"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/informasi"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/arrow_forward_24px"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/form_entry"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/red"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/form_entry"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/arrow_forward_24px"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lihat_data"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/red"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lihat_data"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/arrow_forward_24px"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/keluar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/red"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/keluar"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/arrow_forward_24px"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/created_by_yazid"
+        android:textStyle="normal"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="14sp"/>
+
+</LinearLayout>
