@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
@@ -57,13 +58,18 @@ class DataInformationFragment : Fragment() {
          dataInformationViewModel.getDataByNik(nik)
          dataInformationViewModel.dataByNik.collectLatest {
             Log.d("test_data", it.nik)
-            binding.tvNikData.text = it.nik
-            binding.tvNamaData.text = it.namaLengkap
-            binding.tvNohpData.text = it.nomorHandphone
-            binding.tvJkData.text = it.jenisKelamin.toString()
-            binding.tvTanggalData.text = it.tanggalPendataan
-            binding.tvAlamatData.text = it.lokasiPendataan
-            binding.ivGambarData.setImageURI(Uri.parse(it.gambarPendataan))
+            try {
+               binding.tvNikData.text = it.nik
+               binding.tvNamaData.text = it.namaLengkap
+               binding.tvNohpData.text = it.nomorHandphone
+               binding.tvJkData.text = it.jenisKelamin.toString()
+               binding.tvTanggalData.text = it.tanggalPendataan
+               binding.tvAlamatData.text = it.lokasiPendataan
+               binding.ivGambarData.setImageURI(Uri.parse(it.gambarPendataan))
+            } catch (e: SecurityException) {
+               binding.ivGambarData.setImageResource(R.drawable.noimage)
+               Toast.makeText(context, "Gambar tidak tersedia", Toast.LENGTH_SHORT).show()
+            }
          }
       }
    }
